@@ -23253,6 +23253,10 @@ hr.horizontal.gray-light {
   left: 0 !important;
 }
 
+.active-sidenav {
+  opacity: 0.32;
+}
+
 .navbar {
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.16);
 }
@@ -23889,6 +23893,10 @@ hr.horizontal.gray-light {
     box-shadow: none;
   }
 
+  .navbar-vertical.navbar-expand-xs {
+    max-width: 5.125rem !important;
+  }
+
   .navbar-vertical.navbar-expand-xl .navbar-collapse {
     display: block;
     overflow: auto;
@@ -24231,11 +24239,11 @@ hr.horizontal.gray-light {
   }
 
   .sidenav.fixed-start+.main-content {
-    margin-left: 17.125rem;
+    margin-left: 6.125rem;
   }
 
   .sidenav.fixed-end+.main-content {
-    margin-right: 17.125rem;
+    margin-right: 6.125rem;
   }
 }
 

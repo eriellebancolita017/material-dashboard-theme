@@ -608,8 +608,9 @@ const iconNavbarSidenavMobile = document.getElementById('iconNavbarSidenavMobile
 const iconSidenav = document.getElementById('iconSidenav');
 const sidenav = document.getElementById('sidenav-main');
 let body = document.getElementsByTagName('body')[0];
+let mainContent = document.getElementsByTagName("main")[0]
 let className = 'g-sidenav-pinned';
-
+let mainClassName="active-sidenav"
 if (iconNavbarSidenav) {
   iconNavbarSidenav.addEventListener("click", toggleSidenav);
 }
@@ -622,9 +623,14 @@ if (iconSidenav) {
   iconSidenav.addEventListener("click", toggleSidenav);
 }
 
+if(mainContent) {
+  mainContent.addEventListener("click", hideSidenav);
+}
+
 function toggleSidenav() {
   if (body.classList.contains(className)) {
     body.classList.remove(className);
+    mainContent.classList.remove(mainClassName);
     setTimeout(function() {
       sidenav.classList.remove('bg-white');
     }, 100);
@@ -632,9 +638,21 @@ function toggleSidenav() {
 
   } else {
     body.classList.add(className);
+    mainContent.classList.add(mainClassName)
     sidenav.classList.add('bg-white');
     sidenav.classList.remove('bg-transparent');
     iconSidenav.classList.remove('d-none');
+  }
+}
+
+function hideSidenav() {
+  if (body.classList.contains(className) && mainContent.classList.add(mainClassName)) {
+    body.classList.remove(className);
+    mainContent.classList.remove(mainClassName);
+    setTimeout(function() {
+      sidenav.classList.remove('bg-white');
+    }, 100);
+    sidenav.classList.remove('bg-transparent');
   }
 }
 
