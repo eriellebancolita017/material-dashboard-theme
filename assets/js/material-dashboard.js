@@ -604,6 +604,7 @@ window.onload = function() {
 
 // Toggle Sidenav
 const iconNavbarSidenav = document.getElementById('iconNavbarSidenav');
+const iconNavbarSidenavMobile = document.getElementById('iconNavbarSidenavMobile');
 const iconSidenav = document.getElementById('iconSidenav');
 const sidenav = document.getElementById('sidenav-main');
 let body = document.getElementsByTagName('body')[0];
@@ -611,6 +612,10 @@ let className = 'g-sidenav-pinned';
 
 if (iconNavbarSidenav) {
   iconNavbarSidenav.addEventListener("click", toggleSidenav);
+}
+
+if (iconNavbarSidenavMobile) {
+  iconNavbarSidenavMobile.addEventListener("click", toggleSidenav);
 }
 
 if (iconSidenav) {

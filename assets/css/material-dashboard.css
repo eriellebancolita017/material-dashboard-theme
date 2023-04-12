@@ -9445,6 +9445,10 @@ fieldset:disabled .btn {
   margin-top: 1.5rem !important;
 }
 
+.mt-4-5 {
+  margin-top: 1.75rem !important;
+}
+
 .mt-5 {
   margin-top: 3rem !important;
 }
@@ -24263,7 +24267,7 @@ body:not(.dark-version) .sidenav.bg-transparent .collapse .nav-item .nav-link.ac
 }
 
 .sidenav-header {
-  height: 4.875rem;
+  height: 2.875rem;
 }
 
 .sidenav-footer .card.card-background:after {
